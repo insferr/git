@@ -1,0 +1,76 @@
+# ---- Build output / compiled binaries ----
+*.exe
+*.out
+*.app
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+*.pdb
+*.ilk
+*.exp
+*.idb
+
+# ---- Build directories ----
+build/
+Build/
+out/
+bin/
+obj/
+dist/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+/Makefile
+cmake_install.cmake
+
+# ---- IDE / editor project files ----
+.vs/
+.vscode/
+.idea/
+*.vcxproj
+*.vcxproj.*
+*.sln
+*.suo
+*.user
+*.aps
+*.ncb
+*.sdf
+*.opensdf
+*.VC.db
+*.layout
+*.depend
+*.code-workspace
+*.swp
+*.swo
+
+# ---- Debug artifacts / logs ----
+*.log
+*.tmp
+*.temp
+*.bak
+*.cache
+
+# ---- Dependency / package dirs ----
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# ---- Environment / secrets ----
+.env
+.env.*
+*.pem
+*.key
+
+# ---- OS metadata ----
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.DS_Store
+$RECYCLE.BIN/
