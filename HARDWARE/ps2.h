@@ -13,10 +13,10 @@
 #define PS2_CLK_PIN       GPIO_Pin_11     
 
 #define PS2_CMD_PORT      GPIOB
-#define PS2_CMD_PIN       GPIO_Pin_5       
+#define PS2_CMD_PIN       GPIO_Pin_12
 
 #define PS2_DAT_PORT      GPIOB
-#define PS2_DAT_PIN       GPIO_Pin_6    
+#define PS2_DAT_PIN       GPIO_Pin_13    
 
 
 #define PS2_HALF_CLK_US   10     
@@ -24,7 +24,11 @@
 #define PS2_READ_GAP_US   1000     
 #define PS2_READ_RETRY    5        
 
-#define PS2_STICK_CENTER  128     
+/* 1 = 左右摇杆字节对调（本车接收机实测：右摇杆有反应、左摇杆没反应，确认为对调）；
+ * 0 = 标准顺序。改这里即可，无需改 ps2.c 逻辑。                              */
+#define PS2_SWAP_STICKS   1
+
+#define PS2_STICK_CENTER  128
 #define PS2_STICK_DEAD    12    
 
 #define PSB_SELECT        0x0001           

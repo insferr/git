@@ -160,10 +160,17 @@ uint8_t PS2_Read(void)
     PS2_Data.Mode = resp[1];
     PS2_Data.Btn1 = resp[3];
     PS2_Data.Btn2 = resp[4];
+#if PS2_SWAP_STICKS
+    PS2_Data.RX   = resp[7];
+    PS2_Data.RY   = resp[8];
+    PS2_Data.LX   = resp[5];
+    PS2_Data.LY   = resp[6];
+#else
     PS2_Data.RX   = resp[5];
     PS2_Data.RY   = resp[6];
     PS2_Data.LX   = resp[7];
     PS2_Data.LY   = resp[8];
+#endif
   
     if ((resp[1] == 0x41) || (resp[1] == 0x73) || (resp[1] == 0x79))
     {
